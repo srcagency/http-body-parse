@@ -1,0 +1,36 @@
+{
+	"name": "http-body-parse",
+	"version": "1.0.0",
+	"description": "Parse and cache the body of a http request (supports json, form data and nested form data)",
+	"main": "index.js",
+	"keywords": [
+		"http",
+		"body",
+		"request",
+		"parse"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tjconcept/njs-http-body-parse.git"
+	},
+	"author": {
+		"name": "Thomas Jensen",
+		"email": "thomas@tjconcept.dk",
+		"url": "http://tjconcept.dk"
+	},
+	"devDependencies": {
+		"tap": "~0.4.8"
+	},
+	"scripts": {
+		"test": "./node_modules/.bin/tap test.js"
+	},
+	"readmeFilename": "README.md",
+	"license": "MIT",
+	"dependencies": {
+		"bluebird": "~1.2.2",
+		"formidable": "~1.0.14",
+		"extend": "~1.2.1",
+		"qs": "~0.6.6",
+		"debug": "~0.8.0"
+	}
+}
