@@ -28,4 +28,4 @@ The result is cached and only ever parsed once per request.
 
 ## License
 
-MIT © [Thomas Jensen](http://tjconcept.dk)
+[MIT](http://opensource.org/licenses/MIT) © [Thomas Jensen](http://tjconcept.dk)
