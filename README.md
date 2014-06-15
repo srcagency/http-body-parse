@@ -1,6 +1,6 @@
 # http-body-parse
 
-Parse and cache the body of a http request (supports json, form data and nested form data)
+Parse and cache the body of an http request (supports json, form data and nested form data)
 
 Credits to the team of [formidable](https://github.com/felixge/node-formidable)
 
