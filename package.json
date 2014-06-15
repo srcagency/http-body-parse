@@ -27,10 +27,10 @@
 	"readmeFilename": "README.md",
 	"license": "MIT",
 	"dependencies": {
-		"bluebird": "~1.2.2",
+		"bluebird": "~2.1.2",
 		"formidable": "~1.0.14",
 		"extend": "~1.2.1",
 		"qs": "~0.6.6",
-		"debug": "~0.8.0"
+		"debug": "~1.0.2"
 	}
 }

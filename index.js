@@ -19,11 +19,11 @@ module.exports = function( request, cb ) {
 				var contentType = request.headers['content-type'];
 
 				if (contentType && contentType.match(/json/i)) {
-					debug('processed json body to %j', data);
+					debug('processed json body to %o', data);
 					return data;
 				} else {
 					data = qs.parse(data);
-					debug('processed body to %j', data);
+					debug('processed body to %o', data);
 					return data;
 				}
 			}))
