@@ -25,8 +25,9 @@ var data = httpBodyParse(request)
 
 // using callback
 
-var data = httpBodyParse(request, function( fields ){
-	console.log(fields);
+var data = httpBodyParse(request, function( err, fields ){
+	if (!err)
+		console.log(fields);
 });
 ```
 
