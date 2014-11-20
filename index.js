@@ -8,24 +8,26 @@ var debug = require('debug')('http-body-parse');
 
 Promise.promisifyAll(formidable.IncomingForm.prototype);
 
-module.exports = function( request, cb ) {
+module.exports = function( request ) {
 	debug('parsing body');
 
-	return (
-		request._parsedBody
-		|| (request._parsedBody = (new formidable.IncomingForm()).parseAsync(request)
+	if (!request._parsedBody)
+		request._parsedBody = new Promise(function( resolve ){
+			resolve((new formidable.IncomingForm()).parseAsync(request));
+		})
 			.spread(extend)
 			.then(function( data ) {
 				var contentType = request.headers['content-type'];
 
 				if (contentType && contentType.match(/json/i)) {
 					debug('processed json body to %o', data);
-					return data;
 				} else {
 					data = qs.parse(data);
 					debug('processed body to %o', data);
-					return data;
 				}
-			}))
-	).nodeify(cb);
+
+				return data;
+			});
+
+	return request._parsedBody;
 };

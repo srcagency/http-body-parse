@@ -17,18 +17,10 @@ The result is cached and only ever parsed once per request.
 ```js
 var httpBodyParse = require('http-body-parse');
 
-// using promises
 var data = httpBodyParse(request)
 	.then(function( fields ){
 		console.log(fields);
 	});
-
-// using callback
-
-var data = httpBodyParse(request, function( err, fields ){
-	if (!err)
-		console.log(fields);
-});
 ```
 
 ## License
