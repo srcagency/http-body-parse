@@ -25,4 +25,4 @@ var data = httpBodyParse(request)
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT) © [Thomas Jensen](http://tjconcept.dk)
+[MIT](http://opensource.org/licenses/MIT) © [src.agency](http://src.agency)
