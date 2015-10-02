@@ -16,10 +16,10 @@
 	"author": "Thomas Jensen <thomas@src.agency> (http://src.agency)",
 	"license": "MIT",
 	"dependencies": {
-		"bluebird": "^2.3.6",
-		"formidable": "^1.0.15",
+		"bluebird": "^2.10.2",
+		"formidable": "^1.0.17",
 		"object-assign": "^4.0.1",
 		"qs": "^5.1.0",
-		"debug": "^2.1.0"
+		"debug": "^2.2.0"
 	}
 }
