@@ -12,14 +12,13 @@ module.exports = function( request ) {
 	debug('parsing body');
 
 	if (!request._parsedBody)
-		request._parsedBody = new Promise(function( resolve ){
-			resolve((new formidable.IncomingForm()).parseAsync(request));
-		})
+		request._parsedBody = (new formidable.IncomingForm())
+			.parseAsync(request)
 			.spread(assign)
-			.then(function( data ) {
+			.then(function( data ){
 				var contentType = request.headers['content-type'];
 
-				if (contentType && contentType.match(/json/i)) {
+				if (contentType && ~contentType.indexOf('json')) {
 					debug('processed json body to %o', data);
 				} else {
 					data = qs.parse(data);
