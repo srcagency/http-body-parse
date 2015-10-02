@@ -2,7 +2,7 @@
 
 var Promise = require('bluebird');
 var formidable = require('formidable');
-var extend = require('extend');
+var assign = require('object-assign');
 var qs = require('qs');
 var debug = require('debug')('http-body-parse');
 
@@ -15,7 +15,7 @@ module.exports = function( request ) {
 		request._parsedBody = new Promise(function( resolve ){
 			resolve((new formidable.IncomingForm()).parseAsync(request));
 		})
-			.spread(extend)
+			.spread(assign)
 			.then(function( data ) {
 				var contentType = request.headers['content-type'];
 
