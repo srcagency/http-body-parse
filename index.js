@@ -3,7 +3,7 @@
 var Promise = require('bluebird');
 var formidable = require('formidable');
 var extend = require('extend');
-var qs = require('querystringparser');
+var qs = require('qs');
 var debug = require('debug')('http-body-parse');
 
 Promise.promisifyAll(formidable.IncomingForm.prototype);

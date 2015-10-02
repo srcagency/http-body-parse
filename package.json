@@ -19,7 +19,7 @@
 		"bluebird": "^2.3.6",
 		"formidable": "^1.0.15",
 		"extend": "^2.0.0",
-		"querystringparser": "^0.1.1",
+		"qs": "^5.1.0",
 		"debug": "^2.1.0"
 	}
 }
