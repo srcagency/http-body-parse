@@ -1,6 +1,6 @@
 {
 	"name": "http-body-parse",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"description": "Parse and cache the body of an http request (supports json, form data and nested form data)",
 	"main": "index.js",
 	"keywords": [
