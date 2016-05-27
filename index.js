@@ -6,7 +6,9 @@ var assign = require('object-assign');
 var qs = require('qs');
 var debug = require('debug')('http-body-parse');
 
-Promise.promisifyAll(formidable.IncomingForm.prototype);
+Promise.promisifyAll(formidable.IncomingForm.prototype, {
+	multiArgs: true,
+});
 
 module.exports = function( request ) {
 	debug('parsing body');
